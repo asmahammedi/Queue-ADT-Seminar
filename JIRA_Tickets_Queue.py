@@ -33,15 +33,15 @@ class JiraTicketQueue:
 # Example usage of the JiraTicketQueue class
 queue = JiraTicketQueue()
 
-queue.enqueue("BUG-101: Login error")
+queue.enqueue("BUG-101: Login error")    #adding a jira ticket to the queue 
 queue.enqueue("TASK-204: Add search filter")
 queue.enqueue("FEATURE-305: New dashboard design")  
 
-print(queue.size()) 
+print(queue.size()) #showing the queue size
 
-print(queue.peek())        
+print(queue.peek()) #showing the next tichet in the queue       
 
-queue.dequeue()   
+queue.dequeue()   #process and remove the ticket in the front
 
 print(queue.size())
 
@@ -55,6 +55,9 @@ print(queue.peek())
 
 
 queue.dequeue() 
-print(queue.peek())           
+print(queue.peek())       
+
+is_empty = queue.isEmpty()  # Check if the queue is empty   
+print(f"Is the queue empty? {is_empty}")  # Output: True
  
           
